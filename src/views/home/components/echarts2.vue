@@ -10,9 +10,9 @@
             style="width: 180px"
             @change="handleChange"
         >
-          <SelectOption value="jack">东台两制</SelectOption>
-          <SelectOption value="lucy">东台两制2</SelectOption>
-          <SelectOption value="disabled">东台两制3</SelectOption>
+          <SelectOption value="jack">农业两制</SelectOption>
+          <SelectOption value="lucy">农业两制2</SelectOption>
+          <SelectOption value="disabled">农业两制3</SelectOption>
         </Select>
       </div>
     </div>

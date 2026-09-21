@@ -21,7 +21,7 @@
                 <div class="flex-s flex-a margin-bottom-10">
                   <img class="icon" src="https://test.elongcom.com/dongtai-one-phone/temporary/1.png" alt="">
                   <div class="title">
-                    <p class="font-16 nowrap">东台两制</p>
+                    <p class="font-16 nowrap">农业两制</p>
                     <p class="gray9 nowrap">农资 |  农药零差</p>
                   </div>
                   <div class="btn">
@@ -32,7 +32,7 @@
                   </div>
                 </div>
                 <p class="text-line3 gray6">
-                  "东台两制"小程序是为推进东台市化肥农药实名制购买定额制使用试点而专门打造的农资购买平台。该小程序专为广大农业从业者定制
+                  "农业两制"小程序是为推进农业市化肥农药实名制购买定额制使用试点而专门打造的农资购买平台。该小程序专为广大农业从业者定制
                 </p>
             </div>
           </div>

@@ -107,7 +107,7 @@ const config = reactive({
 const dataSource = [
   {
     key: '1',
-    name: '东农两制',
+    name: '农业两制',
     age: 2978,
     address: 2978,
     time: 28,
@@ -116,7 +116,7 @@ const dataSource = [
   },
   {
     key: '2',
-    name: '东农两制（销售员端）',
+    name: '农业两制（销售员端）',
     age: 2978,
     address: 2978,
     time: 78,
