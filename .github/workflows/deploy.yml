@@ -38,7 +38,9 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm config set registry https://registry.npmmirror.com
+          npm ci
 
       - name: Build
         run: npm run build
@@ -50,7 +52,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # 上传 dist 文件夹
-          path: "./dist"
+          path: "./bigScreen"
 
       - name: Deploy to GitHub Pages
         id: deployment
