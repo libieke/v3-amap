@@ -1,35 +1,35 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import legacy from '@vitejs/plugin-legacy';
-import { resolve } from 'path';
-const pathResolve = (dir) => resolve(__dirname, dir);
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import legacy from "@vitejs/plugin-legacy";
+import { resolve } from "path";
+const pathResolve = (dir: any) => resolve(__dirname, dir);
 // https://jsy.xjjs.gov.cn
 export default defineConfig({
-  base:'./',
+  base: "./",
   server: {
     proxy: {
-      '/api': {
-        target: 'https://xxx.cn',
+      "/api": {
+        target: "http://192.168.1.104:8888/",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
-      }
-    }
+        rewrite: (path) => path.replace(/^\/api/, "/api"),
+      },
+    },
   },
   build: {
-    outDir: 'dongtai-one-phone',
-    assetsDir: 'static',
-    target: ['es2015']
+    outDir: "dongtai-one-phone",
+    assetsDir: "static",
+    target: ["es2015"],
   },
   plugins: [
     vue(),
     legacy({
-      targets: ['ie >= 11', 'chrome >= 60'],
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+      targets: ["ie >= 11", "chrome >= 60"],
+      additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
     }),
   ],
   resolve: {
     alias: {
-       '@': pathResolve("./src")
-    }
-  }
+      "@": pathResolve("./src"),
+    },
+  },
 });
