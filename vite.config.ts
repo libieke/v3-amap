@@ -5,7 +5,7 @@ import { resolve } from "path";
 const pathResolve = (dir: any) => resolve(__dirname, dir);
 // https://jsy.xjjs.gov.cn
 export default defineConfig({
-  base: "./",
+  base: "/v3-amap/",
   server: {
     proxy: {
       "/api": {
