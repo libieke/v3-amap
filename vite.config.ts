@@ -7,7 +7,7 @@ const pathResolve = (dir: any) => resolve(__dirname, dir);
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   return {
-    base: "/v3-amap/,
+    base: "/v3-amap/",
     server: {
       proxy: {
         "/api": {
