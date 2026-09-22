@@ -2,7 +2,7 @@
   <div class="header flex-a min-content">
     <div class="relative w-100p">
       <router-link to="/" class="logo">
-        <img src="/src/assets/images/home/logo.png" alt="">
+        <!-- <img src="/src/assets/images/home/logo.png" alt=""> -->
       </router-link>
       <div class="InputSearch">
         <InputSearch
