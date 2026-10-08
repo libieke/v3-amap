@@ -1,11 +1,11 @@
 <template>
   <div class="p-b-40 min-content">
     <Banner/>
-    <div class="flex-s p-l-20 p-r-20 margin-bottom-20">
+    <div class="home-row p-l-20 p-r-20 margin-bottom-20">
       <RankingList/>
       <Trajectory/>
     </div>
-    <div class="flex-s p-l-20 p-r-20">
+    <div class="home-row p-l-20 p-r-20">
       <Echarts/>
       <Echarts2/>
     </div>
@@ -18,3 +18,10 @@ import Trajectory from './components/trajectory.vue';
 import Echarts from './components/echarts.vue';
 import Echarts2 from './components/echarts2.vue';
 </script>
+<style scoped lang="scss">
+.home-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+</style>

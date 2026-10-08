@@ -76,7 +76,8 @@ onMounted(init);
 <style scoped lang="scss">
 .trajectory-wrap{
   border: 1px solid #dddddd;
-  width: 420px;
+  width: 100%;
+  flex: 1 1 100%;
   border-radius: 8px;
   box-shadow: 0 6px 8px 0 rgba(178, 179, 182, 0.25);
 
@@ -120,11 +121,13 @@ onMounted(init);
       padding: 8px;
       border-radius: 4px;
       background: #F5F5F5;
-      height: 156px;
+      min-height: 156px;
+      height: auto;
 
       .icon{
         width: 100px;
         height: 140px;
+        flex-shrink: 0;
         img{
           display: block;
           width: 100%;
@@ -135,16 +138,33 @@ onMounted(init);
 
       .icon-r{
         width: calc(100% - 115px);
+        min-width: 0;
 
         .icon{
           display: block;
           width: 42px;
           height: 42px;
           border: 0;
+          flex-shrink: 0;
         }
         .title{
-          width: 92px;
+          width: calc(100% - 120px);
+          min-width: 0;
         }
+        .btn{
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 420px;
+    flex: 0 0 420px;
+
+    .trajectory-box{
+      .bf{
+        height: 156px;
       }
     }
   }

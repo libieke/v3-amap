@@ -219,9 +219,11 @@ onMounted(init);
 <style scoped lang="scss">
 .Rank-wrap{
   border: 1px solid #dddddd;
-  width: calc(100% - 440px);
+  width: 100%;
+  flex: 1 1 100%;
   border-radius: 8px;
   box-shadow: 0 6px 8px 0 rgba(178, 179, 182, 0.25);
+  overflow: hidden;
 
   .Rank-title{
     border-bottom: 1px solid #EBDAC2;
@@ -256,6 +258,10 @@ onMounted(init);
     }
   }
 
+  .Rank-box {
+    overflow-x: auto;
+  }
+
   .code-left{
     padding: 3px 0;
     width: calc(100% - 130px);
@@ -264,6 +270,7 @@ onMounted(init);
       width: 60px;
       height: 60px;
       border-radius: 3px;
+      flex-shrink: 0;
       img{
         display: block;
         width: 100%;
@@ -283,6 +290,7 @@ onMounted(init);
     height: 40px;
     color: #3571EB;
     border-radius: 5px;
+    white-space: nowrap;
     .con{
       display: none;
       position: absolute;
@@ -293,6 +301,7 @@ onMounted(init);
       left: -20px;
       background: white;
       padding: 10px;
+      z-index: 10;
     }
 
     &:hover{
@@ -314,15 +323,17 @@ onMounted(init);
 
 
   .customized{
-    max-width: 430px;
-  }
-  @media screen and (min-width: 1280px) {
-    .customized{
-      max-width: calc((100vw - 460px) / 1.8);
-    }
+    max-width: none;
   }
 
+  @media screen and (min-width: 768px) {
+    flex: 1 1 calc(100% - 440px);
+    width: calc(100% - 420px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% - 440px);
+  }
 
 }
-
 </style>

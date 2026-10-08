@@ -58,17 +58,21 @@
 .banner-wrap{
   padding: 20px;
   .banner {
-    height: 166px;
+    min-height: 166px;
     background: linear-gradient(90deg, #0B53DB 0%, #1A64EF 100%);
     border-radius: 8px;
   }
   .banner-list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     color: white;
     dt{
-      width: 16%;
+      flex: 1 1 100%;
+      width: 100%;
+      min-width: auto;
       background: linear-gradient(270deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%);
+      padding: 20px;
 
       :deep(.ant-select){
         .ant-select-selector{
@@ -82,24 +86,19 @@
       }
     }
     dd{
-      width: 21%;
+      flex: 1 1 calc(50% - 10px);
+      width: auto;
+      min-width: 120px;
+      padding: 15px 10px;
+
       &:before{
-        display: block;
-        content: '';
-        width: 1px;
-        height: 70px;
-        background: rgba(255, 255, 255, 0.20);
-        position: absolute;
-        right: 0;
-        top: 50%;
-        margin-top: -35px;
+        display: none;
       }
     }
     dt,dd{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
       flex-direction: column;
       position: relative;
     }
@@ -110,6 +109,7 @@
       display: flex;
       padding: 8px;
       margin-top: 10px;
+      font-size: 12px;
 
       &:before{
         display: block;
@@ -129,4 +129,39 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .banner-wrap{
+    .banner {
+      height: 166px;
+    }
+    .banner-list{
+      flex-wrap: nowrap;
+      height: 100%;
+
+      dt{
+        flex: 0 0 16%;
+        width: 16%;
+        padding: 0;
+        height: 100%;
+      }
+      dd{
+        flex: 0 0 21%;
+        width: 21%;
+        padding: 0;
+        height: 100%;
+
+        &:before{
+          display: block;
+          width: 1px;
+          height: 70px;
+          background: rgba(255, 255, 255, 0.20);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -35px;
+        }
+      }
+    }
+  }
+}
 </style>

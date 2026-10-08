@@ -263,13 +263,16 @@ onMounted(init);
 
 <style scoped lang="scss">
 .echarts-wrap{
-  width: calc(50% - 10px);
+  width: 100%;
+  flex: 1 1 100%;
   border: 1px solid #dddddd;
   border-radius: 8px;
   box-shadow: 0 6px 8px 0 rgba(178, 179, 182, 0.25);
   height: 360px;
   .title{
     padding: 15px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .echarts{
@@ -277,4 +280,10 @@ onMounted(init);
   }
 }
 
+@media screen and (min-width: 768px) {
+  .echarts-wrap{
+    width: calc(50% - 10px);
+    flex: 1 1 calc(50% - 10px);
+  }
+}
 </style>
